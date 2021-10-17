@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My bhadwa Dost</title>
+    <link rel="stylesheet" href="https://static.notesocean.com/vendor/bootstrap4/css/bootstrap.css">
+    <style>
+        .col-md-2{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+  <section class="container-fluid">
+      <div class="card w-100 mt-5">
+          <div class="card-content">
+              <div class="card-header">
+                   <h1 class="text-center text-danger"> MY BHADWA DOST </h1>
+                   <p class="text-center">Click following button  to know about them</p>
+              </div>
+              <div class="card-body p-0 px-2 py-3 text-center">
+                  <div class="row">
+                      <div class="col-md-2">
+                        <button class="btn btn-sm btn-primary" data-img="saurabhh.png"> Sourbh Anand </button>
+                      </div>
+                      <div class="col-md-2">
+                        <button class="btn btn-sm btn-warning" data-img="RATNESH.png"> Ratnesh Pandey </button>
+                      </div>
+                      <div class="col-md-2">
+                        <button class="btn btn-sm btn-danger" data-img="SHUKLA.png"> Subham Shukla </button>
+                      </div>
+                      <div class="col-md-2">
+                        <button class="btn btn-sm btn-info" data-img="SACHIN.png"> Sachin Kumar</button>
+                      </div>
+                      <div class="col-md-2">
+                        <button class="btn btn-sm btn-warning" data-img="SUBHAMRAI.png"> Subham  Kumar</button>
+                      </div>
+                  </div>
+                  
+                 
+                 
+                
+                  
+              </div>
+              <div class="card-footer text-center">
+                  <b class="text-center text-danger">Develop by: Zaalim kabootar</b>
+              </div>
+          </div>
+      </div>
+   
+  </section>
+  <section>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="card p-0">
+                    <div class="card-content p-0">
+                        <img  class="card-img-top" src="">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer py-1">
+              <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  
+  <script src="https://static.notesocean.com/vendor/jquery/jquery-3.6.0.min.js"></script>
+  <script src="https://static.notesocean.com/vendor/bootstrap4/js/bootstrap.js"></script>
+  <script>
+      $(document).ready(function(){
+          $(".btn").each(function(){
+              $(this).click(function(){
+                 var img = $(this).attr("data-img");
+                 var title = $(this).html();
+                 $(".modal-title").html(title);
+                 $("img").attr("src",img);
+                 $(".modal").modal("show");
+              })
+          })
+      })
+  </script>
+</body>
+</html>
